@@ -6,7 +6,6 @@ public class simpleif {
 	A method that takes an integer as parameter, and determines if it is a multiple of 10.
 	A method that takes three doubles as parameters, and prints out the biggest of the three (this is a maximum function). */
 	
-	private double maxval;
 	private int d1;
 	private double d2;
 	public void checkPos(int a) {
@@ -19,8 +18,8 @@ public class simpleif {
 		}
 	}
 	
-	public void evenOrOdd() {
-		if (x % 2 == 1) {
+	public void evenOrOdd(int a) {
+		if (a % 2 == 1) {
 			System.out.println("odd");
 		}
 		else {
@@ -45,8 +44,7 @@ public class simpleif {
 		}
 	}
 	public void maximum(double a, double b, double c) {
-		maxval = Math.max(a, b);
-		System.out.println(Math.max(maxval, c));
+		System.out.println(Math.max(Math.max(a, b), c));
 	}
 	
 	public void wholeNum(double a) {
@@ -63,6 +61,7 @@ public class simpleif {
 	public static void main(String args[]) {
 		simpleif test = new simpleif();
 		
+		test.maximum(3.0, 4.0, 5.0);
 		test.wholeNum(3.0);
 	}
 }
