@@ -134,7 +134,7 @@ public class AdventureProject {
 	
 	// 4 - bathroom path, leads to glance or guess
 	public void bathroom() {
-		loading(".", 300)
+		loading(".", 300);
 		System.out.println("\n **You're taking the test, and come up to a 20-point question. Your brain completely blank out.**"
 						 + "\n **You need this question to improve your grade in this class which is a 75.**");
 		sleep(300);
@@ -187,7 +187,7 @@ public class AdventureProject {
 		error = true;
 		while (error) {
 			String choice = in.next();
-			if (choice.equals("A") || choice.equals("a")) || choice.equals("C") || choice.equals("c")) {
+			if (choice.equals("A") || choice.equals("a") || choice.equals("C") || choice.equals("c")) {
 				not();
 				error = false;
 			}
