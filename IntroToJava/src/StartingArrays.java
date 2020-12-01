@@ -52,7 +52,7 @@ public class StartingArrays {
 		
 		// run.display(arr);
 		// run.oneToN(9);
-		 run.swap(arr);
+		// run.swap(arr);
 		// run.userArray();
 		// run.reverses(arr);
 	}
