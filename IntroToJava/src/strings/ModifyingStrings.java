@@ -1,5 +1,7 @@
 package strings;
 
+import java.util.Arrays;
+
 public class ModifyingStrings {
 
 	public void adverbToSuperlative(String adv) {
@@ -31,8 +33,30 @@ public class ModifyingStrings {
 		System.out.println(look);
 	}
 	
-	public void stringCheck(String str1, String str2, String str3) {
+	public int wordCount(String str) {
+		int wC = 1;
+		for (int i = 0; i < str.length()-1; i++) {
+			if (str.charAt(i) == ' ')
+				wC++;
+		}
+		return(wC);
+	}
+	
+	public void sentenceToArray(String str) {
+		String[] arr = new String[wordCount(str)];
+		for (int k = 0; k < arr.length; k++) {
+			arr[k] = "";
+		}
 		
+		int i = 0;
+		for (int j = 0; j < str.length(); j++) {
+				if (str.charAt(j) == ' ') {
+					i++;
+					j++;
+				}
+				arr[i] += str.charAt(j);
+		}
+		System.out.println(Arrays.toString(arr));
 	}
 	
 	public static void main(String args[]) {
@@ -42,5 +66,6 @@ public class ModifyingStrings {
 		run.negation("predisposed");
 		run.suffixCheck("safer", "ine");
 		run.replace("david", 'd', 'm');
+		run.sentenceToArray("I like CS");
 	}
 }
