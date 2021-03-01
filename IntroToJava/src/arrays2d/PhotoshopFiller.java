@@ -1,3 +1,5 @@
+// Joel Lawore
+
 package arrays2d;
 // Photoshop program that can run several manipulations on 
 // an image
