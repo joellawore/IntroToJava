@@ -49,7 +49,7 @@ public class EvenMoreWith2DArrays {
 		String[][] arr = new String[n][n];
 		for (int i = 0; i < arr.length; i++) {
 			for (int j = 0; j < arr[i].length; j++) {
-				if (i == j)
+				if (i == j || (i+j+1) == arr.length)
 					arr[i][j] = "n";
 			}
 		}
@@ -75,18 +75,18 @@ public class EvenMoreWith2DArrays {
 		for (int i = 0; i < arr.length; i++) {
 			doub[i] = new int[arr[i].length*2];
 		}
-		int x = 0;
 		for (int i = 0; i < doub.length; i++) {
-			for (int j = 0; j < doub[i].length; j+=2) {
+			int j = 0;
+			for (int x = 0; x < arr[i].length; x++) {
 				doub[i][j] = arr[i][x];
-				x++;
+				j+=2;
 			}
 		}
 		display(doub);
 	}
 	public void reverse2D(double[][] arr) {
 		for (int i = 0; i < arr.length; i++) {
-			for(int n = 0, j = arr[i].length-1; i < arr[i].length/2; n++, j--) {
+			for(int n = 0, j = arr[i].length-1; n < arr[i].length/2; n++, j--) {
 				double temp = arr[i][n];
 				arr[i][n] = arr[i][j];
 				arr[i][j] = temp;
@@ -95,4 +95,12 @@ public class EvenMoreWith2DArrays {
 		display(arr);
 	}
 	
+	public static void main(String args[]) {
+		EvenMoreWith2DArrays run = new EvenMoreWith2DArrays();
+		// run.arrayToString(new char[][] {{'h', 'e', 'l'}, {'l', 'o'}});
+		// run.diagonals(5);
+		// run.triangle(4);
+		// run.doubleArray(new int[][] {{1, 2, 3}, {4, 5, 6}});
+		// run.reverse2D(new double[][] {{1}, {2, 3}, {4, 5, 6}, {7, 8, 9, 10}, {11, 12, 13, 14, 15}});
+	}
 }
