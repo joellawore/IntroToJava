@@ -1,5 +1,5 @@
 package objects;
-
+//
 public class CreditCard extends InterestAccount{
 
 	public CreditCard(String name, double balance, double interest) {

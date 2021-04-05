@@ -1,5 +1,5 @@
 package objects;
-
+//
 public class InterestAccount extends BankAccount {
 	private double interest;
 	
